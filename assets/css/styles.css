@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,600;1,400;1,600&family=Libre+Baskerville:ital@0;1&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    /*
+        font-family: 'Archivo', sans-serif;
+        font-family: 'Libre Baskerville', serif;
+    */
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+body{
+    background-color: black;
+    color: rgb(255, 246, 235);
+
+    width: 100%;
+    height: 100vh;
+}
+
+header{
+    padding: 1%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+
+    background-color: blue;
+
+    z-index: 100;
+}
+
+nav{
+    text-align: center;
+}
+
+nav ul{
+    list-style: none;
+    display: inline-block;
+}
+
+nav ul li{
+    float: left;
+    font-size: 0.6em;
+    padding: 0 8vw;
+}
+
+nav ul li a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+text-decoration: underline;
+}
+
+/*CLASES*/
+
+.title{
+    font-family: 'Arimo', sans-serif;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.subtitle{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2.5em;
+    font-weight: 400;
+    font-style: italic;
+}
+
+/*SECCIONES*/
+
+.grid-container{
+    display: flex;
+    justify-content: center;
+}
+
+/*SECCION ABOUT ME*/
+
+#about-me{
+    display: flex;
+    height: 25.1vh;
+
+    border-top: 1px solid rgb(255, 246, 235);
+    border-left: 1px solid rgb(255, 246, 235);
+    border-bottom: 1px solid rgb(255, 246, 235);
+}
+
+#about-me img{
+    width: 50%;
+    height: 25vh;
+
+    border-bottom: 1px solid rgb(255, 246, 235);
+}
+
+.about-text{
+    margin: 1%;
+}
+
+.about-text .title{
+    font-size: 0.9em;
+}
+
+.grid-item2{
+    width: 80%;
+
+    border-top: 1px solid rgb(255, 246, 235);
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+#titulo{
+    display: flex;
+    border-bottom: 1px solid white;
+}
+
+#titulo .subtitle{
+    width: 100%;
+}
+
+#work{
+    position: relative;
+}
+
+.grid-item2 .article-grid{
+    border-bottom: 1px solid white;
+}
+
+.grid-item2 .article-grid .img-article{
+    width: 30%;
+    height: 200px;
+    object-fit: cover;
+    border-right: 1px solid white;
+}
+
+.grid-item2 h4{
+    font-size: 0.7em;
+    color: rgb(0, 0, 255);
+}
+
+.article-grid{
+    display: flex;
+    position: relative;
+}
+
+.article-grid .text-grid{
+    padding: 2%;
+}
+
+.article-grid .text-grid .title{
+    font-size: 15px;
+}
+
+.grid-item{
+    background: grey;
+    border: 0.5px solid antiquewhite;
+    text-align: center;
+}
+
+.overlay{
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    transition: .5s ease;
+	opacity:0;
+	display: flex;
+	justify-content: end;
+	align-items: center;
+}
+
+#img-overlay{
+    width: 10%;
+}
+
+.article-grid:hover .overlay{
+	opacity:1;
+}
+
+/*SIGUERRATONES*/
+
+#siguerratones{
+    position: absolute;
+    background: black;
+    width: 3%;
+
+    display: none;
+    z-index: 100;
+}
+
+#siguerratones img{
+    width: 500%;
+}
+
+/*BARDO*/
+
+#bardo{
+    display: flex;
+}
+
+#bardo-texto{
+    position: sticky;
+    top: 0;
+    width: 40%;
+    height: 100vh;
+
+    background-color: black;
+    border-right: 0.5px solid rgb(255, 255, 255) !important;
+}
+
+#bardo-texto a{
+    width: 100%;
+    height: 20%;
+}
+
+#bardo-texto .title{
+    font-size: 1.1em;
+}
+
+.bardo-texto-2{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 10px;
+}
+
+.bardo-texto-2 h4{
+    color: rgb(0, 0, 255);
+    width: 100%;
+}
+
+.bardo-texto-2:hover .overlay{
+	opacity: 1;
+}
+
+.bardo-texto-2.selected:hover .overlay{
+	opacity: 0;
+}
+
+#bardo-images{
+    display: flex !important;
+    flex-wrap: wrap;
+    width: 60%;
+    border-bottom: 0.5px solid rgb(0, 0, 255) !important;
+    border-top: 0.5px solid rgb(0, 0, 255) !important;
+    border-right: 0.5px solid rgb(0, 0, 255) !important;
+}
+
+#bardo-images .title{
+    display: block;
+    width: 100%;
+    font-size: 2em;
+    border: 0.5px solid rgb(0, 0, 255);
+}
+
+#bardo-images a .title{
+    width: 100%;
+}
+
+#bardo-images img{
+    display: flex !important;
+}
+
+.selected{
+    border-top: 0.5px solid rgb(0, 0, 255) !important;
+    border-bottom: 0.5px solid rgb(0, 0, 255) !important;
+    border-right: 0.5px solid rgb(0, 0, 255) !important;
+}
+
+.not-selected{
+    border-right: 0.5px solid white;
+}
+
+/*SECCION FREELANCE*/
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.poster{
+    margin: 5% auto;
+    width: 50%;
+}
+
+.poster-horizontal{
+    margin: 5% auto;
+    width: 90%;
+}
+
+/*SECCION BARDO*/
+
+.visible{
+    display: block !important;
+}
+
+.no-visible{
+    display: none !important;
+}
+
+#freelance-content{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#university-content{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*MODAL*/
+
+#modal{
+    position: fixed;
+    display: none;
+    z-index: 1;
+    padding-top: 10%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#contenido-modal{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 0 auto;
+    width: 50%;
+}
+
+#derecha{
+    background-color: blue;
+    width: 50%;
+}
+
+#izquierda{
+    width: 50%;
+}
+
+#izquierda img{
+    height: 100%;
+}
+
+#modal #derecha .title{
+    color: white;
+    font-size: 1.2em;
+    margin: 10px;
+    margin-top: 20%;
+}
+
+/*MODAL FORM*/
+
+/*FORMS*/
+
+#form-1{
+    display: flex;
+}
+
+#form-contact{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+
+    justify-content: center;
+}
+
+#form-1 .form-element{
+    width: 50%;
+    height: 30%;
+    margin: 10px;
+
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+}
+
+#form-1 .form-element::placeholder{
+    color: white;
+    opacity: 0.5;
+    padding: 10px;
+    margin: 10px;
+
+    font-family: 'Arimo', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+#form-1 #submit-button .submit{
+    background-color: black;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+#form-1 #submit-button{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#form-1 #submit-button .submit{
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 400;
+    font-size: 1em;
+    font-style: italic;
+
+    padding: 1%;
+    margin: 2%;
+}
+
+/*Carrousel*/
+
+.carrousel{
+    max-width: 800px;
+    margin: 0 auto;
+
+    position: relative;
+    z-index: 1000;
+}
+
+#contenidoCarrousel{
+    width: 100%;
+    display: flex;
+
+    position: absolute;
+    justify-content: center;
+    margin: auto;
+}
+
+#contenidoCarrousel button{
+    margin: 25% 20%;
+    padding: 1%;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+}
+
+#imagen{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+}
+
+#paginador{
+    display: flex;
+    justify-content: center;
+    height: 80px;
+	width: 10%;
+	margin: 10px auto;
+    color: white;
+}
+
+/*ABOUT*/
+
+#about-text{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+#about-text h1{
+    width: 100%;
+    border-bottom: 1px solid white;
+}
+
+#about-text p{
+    margin: 1% auto;
+    width: 40%;
+    font-size: 1em;
+}

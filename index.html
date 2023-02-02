@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang=”en”>
+
+<head>
+	<meta charset=”UTF-8”>
+	<title>Julian Lipari Portfolio</title>
+
+    <link href="assets/css/styles.css" rel="stylesheet" type="text/css">    
+</head>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="title">JULIAN LIPARI</a></li>
+            <li><a href="about.html" class="title">ABOUT</a></li>
+            <li><a href="contact.html" class="title">CONTACT</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <main>
+        <div id="siguerratones"><img src="" alt="" id="img-hover"></div>
+
+        <section id="modal">
+            <div id="contenido-modal">
+                <div id="izquierda">
+                    <img src="assets/images/foto-perfil.png" alt="">
+                </div>
+    
+                <div id="derecha">
+                    <h2 class="title">Contactate conmigo para colaborar en tu próximo proyecto creativo</h2>
+                    <div id="form-1">
+                        <form id="form-contact">
+                            <input id="name" type="text" placeholder="NAME" class="form-element" required>
+                            <input id="email" type="text" placeholder="EMAIL" class="form-element" required>
+                            <textarea id="message" type="text" placeholder="MESSAGE" class="form-element" required></textarea>
+                            
+                            <div id="submit-button">
+                                <input class="submit" type="submit" value="SEND" class="form-element">
+                                <a class="submit" id="cerrar-modal">CANCEL</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid-container">
+
+            <div id="about-me">
+                <img src="https://i.ibb.co/cgtcD9b/Foto-de-perfil.png" alt="">
+                <div class="about-text">
+                    <h2 class="subtitle"><b>ABOUT ME</b></h2>
+                    <p class="title">Freelance graphic designer based in Buenos Aires (Argentina) with over 2 years of experience.</p>
+                </div>
+            </div>
+
+            <div class="grid-item2">
+                <div id="titulo">
+                    <p class="subtitle">WORKS</p>
+                </div>
+
+                <a class="article-grid" onclick="buttonSelection(1)" href="bardo.html" id="objetivo" onmouseover="siguerratones.display = 'block'" onmouseout="siguerratones.display = 'none'" onmousemove="seguir()">
+                    <img src="assets/images/buzo-skeitin-bardo.jpg" class="img-article">
+                    <div class="text-grid">
+                        <h4 class="title">Personal project</h4>
+                        <h3 class="subtitle">Bardo</h3>
+                        <p class="title">Bardo is a personal proyect dedicated to enhance the urban and street clothing.</p>
+                    </div>
+                    <div class="overlay">
+                        <img src="assets/images/arrow.png" id="img-overlay">
+                    </div>
+                </a>
+
+                <a class="article-grid" onclick="buttonSelection(2)" href="bardo.html" id="objetivo" onmouseover="siguerratones.display = 'block'" onmouseout="siguerratones.display = 'none'" onmousemove="seguir2()">
+                    <img src="assets/images/freelance/Poster Euphoria Rue.png" class="img-article">
+                    <div class="text-grid">
+                        <h4 class="title">Personal project</h4>
+                        <h3 class="subtitle">Freelance designs</h3>
+                        <p class="title">Differents designs made in the past for personal projects.</p>
+                    </div>
+                    <div class="overlay">
+                        <img src="assets/images/arrow.png" id="img-overlay">
+                    </div>
+                </a>
+
+                <a class="article-grid" href="bardo.html" onmouseover="siguerratones.display = 'block'" onmouseout="siguerratones.display = 'none'" onmousemove="seguir3()">
+                    <img src="assets/images/university/Afiche-tipografico.jpg" class="img-article">
+                    <div class="text-grid">
+                        <h4 class="title">University project</h4>
+                        <h3 class="subtitle">University designs</h3>
+                        <p class="title">Some designs I made during my course on Maimonides University in 2022.</p>
+                    </div>
+                    <div class="overlay">
+                        <img src="assets/images/arrow.png" id="img-overlay">
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <script src="assets/script/script.js"></script>
+
+    </main>
+
+</body>
+
+
+</html>
