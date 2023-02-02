@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,600;1,400;1,600&family=Libre+Baskerville:ital@0;1&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    /*
+        font-family: 'Archivo', sans-serif;
+        font-family: 'Libre Baskerville', serif;
+    */
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+body{
+    background-color: black;
+    color: rgb(255, 246, 235);
+
+    width: 100%;
+    height: 100vh;
+}
+
+#main-works .grid-item2 h4{
+    color: black;
+}
+
+header{
+    padding: 1%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+
+    border-bottom: 1px solid white;
+
+    z-index: 100;
+}
+
+nav{
+    text-align: center;
+}
+
+nav ul{
+    list-style: none;
+    display: inline-block;
+}
+
+nav ul li{
+    float: left;
+    font-size: 0.6em;
+    padding: 0 137px;
+}
+
+#name-title{
+    color: blue;
+}
+
+nav ul li a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+text-decoration: underline;
+}
+
+/*CLASES*/
+
+.title{
+    font-family: 'Arimo', sans-serif;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.subtitle{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2.5em;
+    font-weight: 400;
+    font-style: italic;
+}
+
+/*WORK CONTAINER*/
+
+.work-container{
+    display: flex;
+}
+
+.grid-item2{
+    width: 45%;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+.grid-item2 h2{
+    border-bottom: 1px solid white;
+}
+
+.grid-item2 .article-grid{
+    border-bottom: 1px solid white;
+}
+
+.grid-item2 .article-grid .img-article{
+    width: 30%;
+    border-right: 1px solid white;
+}
+
+.grid-item2 h4{
+    font-size: 0.7em;
+    color: rgb(0, 0, 255);
+}
+
+.article-grid{
+    display: flex;
+    position: relative;
+}
+
+.article-grid .text-grid{
+    padding: 2%;
+}
+
+.article-grid .text-grid p{
+    font-size: 1em;
+}
+
+.grid-item{
+    background: grey;
+    border: 0.5px solid antiquewhite;
+    text-align: center;
+}
+
+.overlay{
+	position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    transition: .5s ease;
+	opacity:0;
+	display: flex;
+	justify-content: end;
+	align-items: center;
+}
+
+#siguerratones{
+    position: absolute;
+    background: black;
+    color: yellow;
+    width: 100px;
+    height: 200px;
+    display: none;
+}
+
+#siguerratones img{
+    z-index: 200;
+    width: 500%;
+}
+
+#img-overlay{
+width: 10%;
+}
+
+.article-grid:hover .overlay{
+	opacity:1;
+}
